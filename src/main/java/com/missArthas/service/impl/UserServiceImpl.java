@@ -2,6 +2,7 @@ package com.missArthas.service.impl;
 
 import com.missArthas.dao.UserDao;
 import com.missArthas.entity.User;
+import com.missArthas.entity.UserEntity;
 import com.missArthas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,13 +21,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
-    public void saveUsers(List<User> us) {
-        for (User u : us) {
+    public void saveUsers(List<UserEntity> us) {
+        for (UserEntity u : us) {
             userDao.save(u);
         }
     }
 
-    public List<User> getAllUsernames() {
+    public List<UserEntity> getAllUsernames() {
         return userDao.findAll();
     }
 }

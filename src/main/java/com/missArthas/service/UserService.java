@@ -1,6 +1,7 @@
 package com.missArthas.service;
 
 import com.missArthas.entity.User;
+import com.missArthas.entity.UserEntity;
 
 import java.util.List;
 
@@ -8,6 +9,6 @@ import java.util.List;
  * Created by shhuang on 2016/12/13.
  */
 public interface UserService {
-    public void saveUsers(List<User> us);
-    public List<User> getAllUsernames();
+    public void saveUsers(List<UserEntity> us);
+    public List<UserEntity> getAllUsernames();
 }

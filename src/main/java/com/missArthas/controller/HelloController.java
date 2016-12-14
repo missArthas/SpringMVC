@@ -2,6 +2,7 @@ package com.missArthas.controller;
 
 import com.missArthas.entity.SoaparamEntity;
 import com.missArthas.entity.User;
+import com.missArthas.entity.UserEntity;
 import com.missArthas.service.SoaparamService;
 import com.missArthas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,12 +35,12 @@ public class HelloController {
 
     @RequestMapping(value = "/addUser",method = RequestMethod.GET)
     public String addUser(){
-        List<User> us = new ArrayList<User>();
-        User u = new User();
+        List<UserEntity> us = new ArrayList<UserEntity>();
+        UserEntity u = new UserEntity();
         u.setUsername("MarK");
         u.setPassword("123456");
         us.add(u);
-        u = new User();
+        u = new UserEntity();
         u.setUsername("Fawofolo");
         u.setPassword("123456");
         us.add(u);
@@ -49,7 +50,7 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping(value = "/getUser.json",method = RequestMethod.GET,headers="Accept=application/json")
-    public List<User> getAllUser() {
+    public List<UserEntity> getAllUser() {
         return userService.getAllUsernames();
     }
 

@@ -2,6 +2,7 @@ package com.missArthas.dao.impl;
 
 import com.missArthas.dao.UserDao;
 import com.missArthas.entity.User;
+import com.missArthas.entity.UserEntity;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +19,13 @@ public class UserDaoImpl implements UserDao {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public int save(User u) {
+    public int save(UserEntity u) {
         int result = (Integer) sessionFactory.getCurrentSession().save(u);
         return result;
     }
 
-    public List<User> findAll() {
-        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(User.class);
+    public List<UserEntity> findAll() {
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(UserEntity.class);
         return criteria.list();
     }
 }
