@@ -22,8 +22,13 @@ public class HelloController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/addUser",method = RequestMethod.GET)
+    @RequestMapping()
     public String index(){
+        return "hello/index";
+    }
+
+    @RequestMapping(value = "/addUser",method = RequestMethod.GET)
+    public String addUser(){
         List<User> us = new ArrayList<User>();
         User u = new User();
         u.setUsername("MarK");

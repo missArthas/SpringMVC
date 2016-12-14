@@ -169,6 +169,25 @@
         <artifactId>mybatis-generator-maven-plugin</artifactId>
         <version>1.3.2</version>
       </plugin>
+
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+
+        <version>${jetty.version}</version>
+        <configuration>
+          <jvmArgs>-Xmx2048m -Xms1536m -XX:PermSize=128m -XX:MaxPermSize=256m</jvmArgs>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <stopPort>19999</stopPort>
+          <stopKey>foo</stopKey>
+          <httpConnector>
+            <port>8899</port>
+          </httpConnector>
+          <webApp>
+            <contextPath>/SpringMVC</contextPath>
+          </webApp>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
