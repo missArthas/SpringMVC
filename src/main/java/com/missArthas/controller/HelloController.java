@@ -27,9 +27,11 @@ public class HelloController {
         List<User> us = new ArrayList<User>();
         User u = new User();
         u.setUsername("MarK");
+        u.setPassword("123456");
         us.add(u);
         u = new User();
         u.setUsername("Fawofolo");
+        u.setPassword("123456");
         us.add(u);
         userService.saveUsers(us);
         return "hello/index";
