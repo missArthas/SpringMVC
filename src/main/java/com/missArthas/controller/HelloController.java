@@ -1,6 +1,8 @@
 package com.missArthas.controller;
 
+import com.missArthas.entity.SoaparamEntity;
 import com.missArthas.entity.User;
+import com.missArthas.service.SoaparamService;
 import com.missArthas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +23,9 @@ import java.util.List;
 public class HelloController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private SoaparamService soaparamService;
 
     @RequestMapping()
     public String index(){
@@ -46,6 +51,12 @@ public class HelloController {
     @RequestMapping(value = "/getUser.json",method = RequestMethod.GET,headers="Accept=application/json")
     public List<User> getAllUser() {
         return userService.getAllUsernames();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/getSoaparams.json",method = RequestMethod.GET,headers="Accept=application/json")
+    public List<SoaparamEntity> getSoaparams() {
+        return soaparamService.getAllSoaparams();
     }
 
 }
