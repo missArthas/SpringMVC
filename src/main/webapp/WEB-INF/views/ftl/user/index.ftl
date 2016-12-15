@@ -19,13 +19,13 @@
                     </td>
                 </tr>
 
-<#--                <!--<start id="image_field"/>&ndash;&gt;
+                <start id="image_field"/>&ndash;&gt;
                 <tr>
                     <th><label for="image">Profile image:</label></th>
                     <td><input name="image" type="file"/>
                 </tr>
-                <!--<end id="image_field"/>&ndash;&gt;
-                <tr>
+                <!--<end id="image_field"/>
+<#--                <tr>
                     <th></th>
                     <td>
                         <checkbox path="updateByEmail"/>
