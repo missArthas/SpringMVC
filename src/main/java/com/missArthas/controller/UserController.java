@@ -27,16 +27,8 @@ public class UserController {
     }
 
     @RequestMapping(value="/reg",method = RequestMethod.POST)
-    public String registe(HttpServletRequest request){
-        String username=request.getParameter("username");
-        String password=request.getParameter("password");
-
-        UserEntity user=new UserEntity();
-        user.setUsername(username);
-        user.setPassword(password);
+    public String registe(UserEntity user){
         userService.saveUser(user);
-        System.out.println("############## username:");
-        System.out.println(user.getUsername());
         return "redirect:"+user.getUsername();
     }
 
