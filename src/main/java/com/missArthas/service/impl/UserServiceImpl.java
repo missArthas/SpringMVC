@@ -15,7 +15,6 @@ import java.util.List;
  * Created by shhuang on 2016/12/13.
  */
 @Service("userService")
-@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -25,6 +24,10 @@ public class UserServiceImpl implements UserService {
         for (UserEntity u : us) {
             userDao.save(u);
         }
+    }
+
+    public void saveUser(UserEntity user) {
+        userDao.save(user);
     }
 
     public List<UserEntity> getAllUsernames() {

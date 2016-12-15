@@ -10,5 +10,6 @@ import java.util.List;
  */
 public interface UserService {
     public void saveUsers(List<UserEntity> us);
+    public void saveUser(UserEntity user);
     public List<UserEntity> getAllUsernames();
 }

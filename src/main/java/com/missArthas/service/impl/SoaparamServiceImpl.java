@@ -16,7 +16,6 @@ import java.util.List;
  */
 
 @Service("soaparamService")
-@Transactional
 public class SoaparamServiceImpl implements SoaparamService{
     @Autowired
     private SoaparamDao soaparamDao;
