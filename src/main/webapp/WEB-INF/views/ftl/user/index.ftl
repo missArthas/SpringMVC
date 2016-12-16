@@ -1,7 +1,7 @@
 <div>
     <h2>Create a user account</h2>
 
-    <form method="POST" action="user/reg">
+    <form method="POST" action="user/reg" enctype="multipart/form-data">
             <table cellspacing="0">
                 <tr>
                     <th><label>Username:</label></th>
@@ -25,7 +25,7 @@
                     <td><input name="image" type="file"/>
                 </tr>
                 <!--<end id="image_field"/>
-<#--                <tr>
+                <tr>
                     <th></th>
                     <td>
                         <checkbox path="updateByEmail"/>
@@ -35,8 +35,7 @@
                 </tr>-->
                 <tr>
                     <th></th>
-                    <td><#--<input name="commit" type="submit"
-                               value="I accept. Create my account." />-->
+                    <td>
                     <button type="submit">I accept. Create my account.</button></td>
                 </tr>
             </table>
