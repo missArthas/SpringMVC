@@ -15,6 +15,6 @@
 
 <div class="pull-right">
 	<div>
-	欢迎：<sec:authentication property="principal.username" /><a href="<c:url value='/j_spring_cas_security_logout'/>">注销</a>
+	欢迎：<sec:authentication property="principal.username" /><a href="#">注销</a>
 	</div>
 </div>
