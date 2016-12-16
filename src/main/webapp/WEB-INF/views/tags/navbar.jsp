@@ -9,7 +9,7 @@
 
 	<!-- PLACE YOUR LOGO HERE -->
 	<span id="logo"> <img src="<c:url value='/resources/img/logo.jpg'/>"
-		alt="recommendDemo">
+		alt="SpringMVC Template">
 	</span>
 </div>
 

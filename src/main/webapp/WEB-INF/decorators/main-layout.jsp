@@ -11,7 +11,7 @@
 <meta charset="utf-8">
 <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-<title>recommendDemo</title>
+<title>SpringMVC template</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -23,7 +23,6 @@
 	href="<c:url value='/resources/css/bootstrap.min.css'/>">
 <link rel="stylesheet" type="text/css" media="screen"
 	href="<c:url value='/resources/css/font-awesome.min.css' />">
-
 	<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
 	<link rel="stylesheet" type="text/css" media="screen"
 		  href="<c:url value='/resources/css/smartadmin-production-plugins.min.css' />">
@@ -62,6 +61,7 @@
 	<div id="main" role="main">
 		<decorator:body />
 	</div>
+<footer>footer</footer>
 
 </body>
 
