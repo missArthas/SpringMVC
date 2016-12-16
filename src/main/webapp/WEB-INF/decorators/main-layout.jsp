@@ -32,6 +32,8 @@
 		  href="<c:url value='/resources/css/smartadmin-skins.min.css'/> ">
 	<link rel="stylesheet" type="text/css" media="screen"
 		  href="<c:url value='/resources/css/smartadmin-rtl.min.css'/> ">
+	<!-- navbar style -->
+	<link rel="stylesheet" href="<c:url value='/resources/css/content.css'/>" type="text/css">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
