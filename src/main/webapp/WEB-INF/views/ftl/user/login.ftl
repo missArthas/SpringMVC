@@ -18,25 +18,9 @@
                         <errors cssClass="error" />
                     </td>
                 </tr>
-
-<#--                <!--<start id="image_field"/>&ndash;&gt;
-                <tr>
-                    <th><label for="image">Profile image:</label></th>
-                    <td><input name="image" type="file"/>
-                </tr>
-                <!--<end id="image_field"/>&ndash;&gt;
                 <tr>
                     <th></th>
                     <td>
-                        <checkbox path="updateByEmail"/>
-                        <label path="updateByEmail">Send me email updates!</label>
-
-                    </td>
-                </tr>-->
-                <tr>
-                    <th></th>
-                    <td><#--<input name="commit" type="submit"
-                               value="I accept. Create my account." />-->
                     <button type="submit">I accept. Create my account.</button></td>
                 </tr>
             </table>

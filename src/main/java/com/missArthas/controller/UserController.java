@@ -23,7 +23,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET,params = "new")
     public String index(Model model){
         model.addAttribute(new UserEntity());
-        return "user/index";
+        return "user/login";
     }
 
     @RequestMapping(value="/reg",method = RequestMethod.POST)
