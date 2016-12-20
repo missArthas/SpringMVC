@@ -45,12 +45,13 @@ public class HelloController {
         u.setPassword("123456");
         us.add(u);
         userService.insert(us);
+        userService.delete(u);
         return "hello/index";
     }
 
     @ResponseBody
     @RequestMapping(value = "/getUser.json",method = RequestMethod.GET,headers="Accept=application/json")
-    public List<UserEntity> getAllUser() {
+    public List<UserEntity> getUser() {
         return userService.findAll();
     }
 

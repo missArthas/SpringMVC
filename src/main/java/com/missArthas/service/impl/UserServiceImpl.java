@@ -29,7 +29,12 @@ public class UserServiceImpl implements UserService {
     }
 
     public int insert(List<UserEntity> users) {
-        return userDao.insert(users);
+        int sum=0;
+        for(UserEntity user:users){
+            int result=userDao.insert(user);
+            sum+=result;
+        }
+        return sum;
     }
 
     public int delete(UserEntity user) {

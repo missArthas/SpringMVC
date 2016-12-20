@@ -27,14 +27,6 @@ public class UserDaoImpl implements UserDao {
         return result;
     }
 
-    public int insert(List<UserEntity> users) {
-        int sum=0;
-        for(int i=0;i<users.size();i++) {
-            int result = (Integer) sessionFactory.getCurrentSession().save(users.get(i));
-            sum+=result;
-        }
-        return sum;
-    }
 
     public int delete(UserEntity user) {
         sessionFactory.getCurrentSession().delete(user);

@@ -10,7 +10,6 @@ import java.util.List;
  */
 public interface UserDao {
     public int insert(UserEntity user);
-    public int insert(List<UserEntity> users);
     public int delete(UserEntity user);
     public int update(UserEntity user);
     public UserEntity queryByPK(UserEntity user);
