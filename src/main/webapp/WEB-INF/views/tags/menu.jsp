@@ -76,13 +76,8 @@
 				<li class="last"><a href="#">二级目录</a></li>
 				<li><a href="#" class="inactives active">维表管理</a>
 					<ul style="display: none">
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
-						<li><a href="<c:url value="#"/>">三级目录</a></li>
+						<li><a href="<c:url value="/metadata/user"/>">user表</a></li>
+						<li><a href="<c:url value="/metadata/authorities"/>">authorities表</a></li>
 					</ul>
 				</li>
 				<li><a href="#" class="inactives active">二级目录</a>

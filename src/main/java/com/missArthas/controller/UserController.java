@@ -28,7 +28,7 @@ public class UserController {
 
     @RequestMapping(value="/reg",method = RequestMethod.POST)
     public String registe(UserEntity user){
-        userService.saveUser(user);
+        userService.insert(user);
         return "redirect:"+user.getUsername();
     }
 
@@ -37,6 +37,5 @@ public class UserController {
         model.addAttribute("username",username);
         return "user/views";
     }
-
 
 }

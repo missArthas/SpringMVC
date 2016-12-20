@@ -20,17 +20,35 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
-    public void saveUsers(List<UserEntity> us) {
-        for (UserEntity u : us) {
-            userDao.save(u);
-        }
-    }
-
-    public void saveUser(UserEntity user) {
-        userDao.save(user);
-    }
-
     public List<UserEntity> getAllUsernames() {
+        return userDao.findAll();
+    }
+
+    public int insert(UserEntity user) {
+        return userDao.insert(user);
+    }
+
+    public int insert(List<UserEntity> users) {
+        return userDao.insert(users);
+    }
+
+    public int delete(UserEntity user) {
+        return  userDao.delete(user);
+    }
+
+    public int update(UserEntity user) {
+        return  userDao.update(user);
+    }
+
+    public UserEntity queryByPK(UserEntity user) {
+        return userDao.queryByPK(user);
+    }
+
+    public List<UserEntity> queryLike(UserEntity user) {
+        return null;
+    }
+
+    public List<UserEntity> findAll() {
         return userDao.findAll();
     }
 }

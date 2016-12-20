@@ -44,14 +44,14 @@ public class HelloController {
         u.setUsername("Fawofolo");
         u.setPassword("123456");
         us.add(u);
-        userService.saveUsers(us);
+        userService.insert(us);
         return "hello/index";
     }
 
     @ResponseBody
     @RequestMapping(value = "/getUser.json",method = RequestMethod.GET,headers="Accept=application/json")
     public List<UserEntity> getAllUser() {
-        return userService.getAllUsernames();
+        return userService.findAll();
     }
 
     @ResponseBody

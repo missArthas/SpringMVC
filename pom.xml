@@ -220,6 +220,14 @@
       <version>1.2.1</version> <!-- makesure correct version here -->
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>18.0</version>
+    </dependency>
+
+
     <!-- junit -->
     <dependency>
       <groupId>junit</groupId>
