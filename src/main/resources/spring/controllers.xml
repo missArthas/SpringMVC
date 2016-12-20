@@ -8,12 +8,6 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	<mvc:annotation-driven/>
 	<context:component-scan base-package="com.missArthas.controller" />
-	
-	<!--Routes -->
-<!--	<mvc:view-controller path="/" view-name="home"/>
-	<mvc:view-controller path="/getstarted" view-name="getstarted"/>
-	<mvc:view-controller path="/errors-validations" view-name="errors-validations"/>	  
-	<mvc:view-controller path="/misc" view-name="misc"/>	  
-	<mvc:view-controller path="/faq" view-name="faq"/>-->
+
 
 </beans>

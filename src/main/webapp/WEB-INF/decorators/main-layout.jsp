@@ -45,9 +45,17 @@
 		src="<c:url value='/resources/js/jqueryui/jquery-ui.min.js'/>"></script>
 	<script type="text/javascript" 
 		src="<c:url value='/resources/js/jqueryui/jquery-ui.js'/>"> </script>
+	<!---import jsgrid-1.5.2--->
+	<link type="text/css" rel="stylesheet" href="<c:url value="/resources/js/jsgrid-1.5.2/jsgrid-theme.min.css"/>"/>
+	<link type="text/css" rel="stylesheet" href="<c:url value="/resources/js/jsgrid-1.5.2/jsgrid.min.css"/>"/>
+	<script type="text/javascript" src="<c:url value="/resources/js/jsgrid-1.5.2/jsgrid.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/resources/js/jquery.validate.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/jquery.page.js'/> "></script>
 </head>
 
 <body>
+	<sec:csrfMetaTags/>
+
 	<header id="header">
 		<!-- end pulled right: nav area -->
 		<c:import url="/WEB-INF/views/tags/navbar.jsp" />

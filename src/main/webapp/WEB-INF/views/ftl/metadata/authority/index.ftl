@@ -16,7 +16,7 @@
             loadData: function (filter) {
                 return $.ajax({
                     type: "GET",
-                    url: "${request.contextPath}/metadata/user/detail.json",
+                    url: "${request.contextPath}/metadata/soaparam/detail.json",
                     data: filter
                 });
             },
@@ -24,7 +24,7 @@
             insertItem: function (item) {
                 return $.ajax({
                     type: "POST",
-                    url: "${request.contextPath}/metadata/user/insert",
+                    url: "${request.contextPath}/metadata/soaparam/insert",
                     data: item
 
                 });
@@ -33,8 +33,9 @@
             updateItem: function (item) {
                 return $.ajax({
                     type: "PUT",
-                    url: "${request.contextPath}/metadata/user/update?id="+item.id+"&username="+item.username+"&password="+item.password,
-                    data: item
+                    url: "${request.contextPath}/metadata/soaparam/update?id="+item.id+"&name="+item.name+"&url="+item.url+
+                        "&request="+item.request+"&response="+item.response,
+                    data: convertItem(item)
                 });
             },
 
@@ -42,8 +43,8 @@
             deleteItem: function (item) {
                 return $.ajax({
                     type: "DELETE",
-                    url: "${request.contextPath}/metadata/user/delete?id="+item.id,
-                    data: item
+                    url: "${request.contextPath}/metadata/soaparam/delete?id="+item.id,
+                    data: convertItem(item)
                 });
             },
         },
@@ -52,9 +53,10 @@
         pageButtonCount: 5,
 
         deleteConfirm: function (item) {
-            return "The client \"" + item.username + "\" will be removed. Are you sure?";
+            return "The client \"" + item.engName + "\" will be removed. Are you sure?";
         },
         rowClick: function (args) {
+
         },
         onItemInserting: function (args) {
             // cancel insertion of the item with empty 'name' field
@@ -71,8 +73,15 @@
 
         fields: [
             {name: "id", type: "number", width: 50, visible: false},
-            {name: "username", type: "text", width: 50,align:"center"},
-            {name: "password", type: "text", width: 200,align:"center"},
+            {name: "name", type: "text", width: 50,align:"center"},
+            {name: "url", type: "text", width: 200,align:"center"},
+            {name: "request", type: "text", width: 200,
+                itemTemplate:function(value,item){
+                    //return $("<div></div>").JSONView(value,{collapsed:true,nl2br:true});
+                    return FirstLoadColl(CustomProcess($("<div></div>"),value));
+                }
+            },
+            {name: "response", type: "text", width: 50,align:"center"},
             {type: "control",align:"center"}
         ]
     });

@@ -11,6 +11,8 @@
     <http auto-config="true">
         <intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
         <remember-me></remember-me>
+        <!-- 暂时关闭csrf保护 -->
+        <csrf disabled="true"/>
     </http>
 
 
