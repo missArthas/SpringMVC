@@ -60,7 +60,6 @@ public class AuthorityDaoImpl implements AuthorityDao {
         return authoritiesEntities;
     }
 
-
     public List<AuthoritiesEntity> findAll() {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(AuthoritiesEntity.class);
         return criteria.list();
