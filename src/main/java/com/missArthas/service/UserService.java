@@ -1,6 +1,5 @@
 package com.missArthas.service;
 
-import com.missArthas.entity.User;
 import com.missArthas.entity.UserEntity;
 
 import java.util.List;
@@ -15,5 +14,6 @@ public interface UserService {
     public int update(UserEntity user);
     public UserEntity queryByPK(UserEntity user);
     public List<UserEntity> queryLike(UserEntity user);
+    public List<UserEntity> queryByUsername(String username);
     public List<UserEntity> findAll();
 }

@@ -26,7 +26,6 @@
                     type: "POST",
                     url: "${request.contextPath}/metadata/user/insert",
                     data: item
-
                 });
             },
 
@@ -64,10 +63,10 @@
             }
         },
 
-//        onItemInserted: function (args) {
-//            location.reload();
-//            //this.controller.loadData();
-//        },
+        onItemInserted: function (args) {
+            location.reload();
+            //this.controller.loadData();
+        },
 
         fields: [
             {name: "id", type: "number", width: 50, visible: false},
@@ -77,13 +76,5 @@
         ]
     });
 
-    function convertItem(item) {
-        item.isEnabled = Number(item.isEnabled);
-        if (item.dataChange_LastTime) {
-            delete item.dataChange_LastTime;
-        }
-        item.strategySchema="";
-        return item;
-    }
 
 </script>

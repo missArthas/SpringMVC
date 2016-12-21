@@ -33,7 +33,7 @@ public class UserManageController {
         if (username!=null&&username.length()!=0) {
             user.setUsername(username);
         }
-        return userService.findAll();
+        return userService.queryLike(user);
     }
 
 
@@ -42,7 +42,7 @@ public class UserManageController {
     @ResponseBody
     List<UserEntity> insert(UserEntity user) {
         userService.insert(user);
-        return userService.findAll();
+        return userService.queryLike(user);
     }
 
     @RequestMapping(value = "update", method = RequestMethod.PUT)

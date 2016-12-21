@@ -1,8 +1,8 @@
 package com.missArthas.dao.impl;
 
 import com.missArthas.dao.UserDao;
-import com.missArthas.entity.User;
 import com.missArthas.entity.UserEntity;
+import com.missArthas.utils.QueryLikeHQL;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
@@ -43,8 +43,23 @@ public class UserDaoImpl implements UserDao {
         return result;
     }
 
+    public List<UserEntity> queryByUsername(String username) {
+        String hql="from UserEntity  where username=?";
+        Query query=sessionFactory.getCurrentSession().createQuery(hql);
+        query.setParameter(0,username);
+        List<UserEntity> userEntities=query.list();
+        return userEntities;
+    }
+
     public List<UserEntity> queryLike(UserEntity user) {
-        return null;
+        //String hql="from UserEntity where username like :username and password like :password and 1=1";
+        String hql= QueryLikeHQL.createQueryLikeHQL(user);
+        System.out.println(hql);
+        Query query=sessionFactory.getCurrentSession().createQuery(hql);
+        query.setProperties(user);
+        //query.setParameter(0,user.getUsername());
+        List<UserEntity> userEntities=query.list();
+        return userEntities;
     }
 
 

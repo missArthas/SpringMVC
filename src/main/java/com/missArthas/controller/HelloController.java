@@ -1,17 +1,14 @@
 package com.missArthas.controller;
 
-import com.missArthas.entity.SoaparamEntity;
-import com.missArthas.entity.User;
+import com.missArthas.entity.AuthoritiesEntity;
 import com.missArthas.entity.UserEntity;
-import com.missArthas.service.SoaparamService;
+import com.missArthas.service.AuthorityService;
 import com.missArthas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +23,7 @@ public class HelloController {
     private UserService userService;
 
     @Autowired
-    private SoaparamService soaparamService;
+    private AuthorityService authorityService;
 
     @RequestMapping()
     public String index(){
@@ -52,13 +49,18 @@ public class HelloController {
     @ResponseBody
     @RequestMapping(value = "/getUser.json",method = RequestMethod.GET,headers="Accept=application/json")
     public List<UserEntity> getUser() {
-        return userService.findAll();
+        UserEntity userEntity=new UserEntity();
+        userEntity.setUsername("MarK");
+        userEntity.setPassword("123");
+        return userService.queryLike(userEntity);
+        //return userService.queryByUsername(userEntity.getUsername());
+        //return userService.findAll();
     }
 
     @ResponseBody
-    @RequestMapping(value = "/getSoaparams.json",method = RequestMethod.GET,headers="Accept=application/json")
-    public List<SoaparamEntity> getSoaparams() {
-        return soaparamService.getAllSoaparams();
+    @RequestMapping(value = "/getAuthorities.json",method = RequestMethod.GET,headers="Accept=application/json")
+    public List<AuthoritiesEntity> getAuthorities() {
+        return authorityService.findAll();
     }
 
 }

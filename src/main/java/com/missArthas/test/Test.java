@@ -1,28 +1,24 @@
 package com.missArthas.test;
 
 import com.missArthas.entity.UserEntity;
-import com.missArthas.utils.HibernateSessionFactory;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.reflect.Field;
 
 /**
  * Created by shhuang on 2016/12/20.
  */
 public class Test {
-    public static void main(String[] args){
-        Session session = HibernateSessionFactory.getCurrentSession();
-        List<UserEntity> us = new ArrayList<UserEntity>();
+    public static void main(String[] args) throws Exception{
         UserEntity u = new UserEntity();
+        u.setId(0);
         u.setUsername("MarK");
         u.setPassword("123456");
-        us.add(u);
-        u = new UserEntity();
-        u.setUsername("Fawofolo");
-        u.setPassword("123456");
-        us.add(u);
-        session.save(u);
+        Field[] fields = u.getClass().getDeclaredFields();
+        for(int i=0; i<fields.length; i++){
+            Field f = fields[i];
+            f.setAccessible(true);
+            System.out.println("属性名:" + f.getName() + " 属性值:" + f.get(u));
+        }
+
     }
 }
