@@ -8,8 +8,7 @@
 <div id="logo-group">
 
 	<!-- PLACE YOUR LOGO HERE -->
-	<span id="logo"> <img src="<c:url value='/resources/img/logo.jpg'/>"
-		alt="SpringMVC Template">
+	<span id="logo">
 	</span>
 </div>
 
