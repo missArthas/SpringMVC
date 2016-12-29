@@ -15,7 +15,6 @@
 				if ($(this).parents('li').siblings('li').children('ul').css('display') == 'block') {
 					$(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
 					$(this).parents('li').siblings('li').children('ul').slideUp(100);
-
 				}
 			} else {
 				//控制自身变成+号
