@@ -13,7 +13,7 @@
     <http pattern="/registe" security="none" />
     <http pattern="/resources/**" security="none" />
     <http auto-config="true">
-        <intercept-url pattern="/**" access="hasAnyRole('ROLE_MANAGER','ROLE_TRANSLATOR','ROLE_CORRECTOR')"/>
+        <intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ROLE_MANAGER','ROLE_TRANSLATOR','ROLE_CORRECTOR')"/>
         <form-login login-page="/loginPage" login-processing-url="/login" always-use-default-target="true"
                     default-target-url="/" authentication-failure-url="/loginPage?error=error" />
         <!--        <access-denied-handler error-page="/login"/>

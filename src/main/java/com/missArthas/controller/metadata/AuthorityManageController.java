@@ -16,7 +16,7 @@ import java.util.List;
  * Created by shhuang on 2016/12/12.
  */
 @Controller
-@RequestMapping("/metadata/authority")
+@RequestMapping("/main/metadata/authority")
 public class AuthorityManageController {
     @Autowired
     AuthorityService authorityService;

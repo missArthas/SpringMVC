@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by shhuang on 2016/12/14.
  */
 @Entity
-@Table(name = "user", schema = "test")
+@Table(name = "user", schema = "test", catalog = "")
 public class UserEntity {
     private int id;
     private String username;

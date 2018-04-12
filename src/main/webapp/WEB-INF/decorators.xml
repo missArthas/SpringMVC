@@ -7,9 +7,10 @@
         <!--<pattern>/WEB_INF/views/ftl/security/*</pattern>-->
         <pattern>/loginPage*</pattern>
         <pattern>/registe*</pattern>
+        <pattern>/corpus*</pattern>
     </excludes>
 
 	<decorator name="main-layout" page="main-layout.jsp">
-        <pattern>/*</pattern>     
+        <pattern>/main*</pattern>
     </decorator>	
 </decorators>

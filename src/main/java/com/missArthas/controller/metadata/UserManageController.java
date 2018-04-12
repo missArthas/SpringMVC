@@ -14,7 +14,7 @@ import java.util.List;
  * Created by shhuang on 2016/12/12.
  */
 @Controller
-@RequestMapping("/metadata/user")
+@RequestMapping("/main/metadata/user")
 public class UserManageController {
     @Autowired
     UserService userService;
